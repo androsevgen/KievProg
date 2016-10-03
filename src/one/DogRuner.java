@@ -15,6 +15,7 @@ public class DogRuner {
 
         Dog dog1 = new Dog("Peta", "Doda");
         dog1.test();
+        dog.getName();
 
 
     }
