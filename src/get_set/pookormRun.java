@@ -7,10 +7,12 @@ import java.util.Scanner;
  */
 public class pookormRun {
     public static void main(String[] args) {
-            popkorm pop = new popkorm();
+            popkorm pop = new popkorm("Status");
         pop.setName("Bora");
         pop.setAge(23);
         System.out.println(pop.getAge()+" " +pop.getName());
+        System.out.println(pop.getStatus());
+
     }
 
 }

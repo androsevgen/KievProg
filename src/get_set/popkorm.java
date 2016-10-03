@@ -10,6 +10,10 @@ public class popkorm {
     private String  status;
     static String  all;
 
+    public popkorm(String status) {
+        this.status = status;
+    }
+
     public static int getId() {
         return id;
     }
