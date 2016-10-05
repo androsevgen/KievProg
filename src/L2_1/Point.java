@@ -1,8 +1,6 @@
 package L2_1;
 
-/**
- * Created by jlab13 on 04.10.2016.
- */
+
 public class Point {
     private final int x;
     private final int y;
@@ -19,4 +17,6 @@ public class Point {
     public int getY() {
         return y;
     }
+
+
 }

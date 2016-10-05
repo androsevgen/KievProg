@@ -2,10 +2,9 @@ package L2_1;
 
 import java.util.ArrayList;
 
-/**
- * Created by jlab13 on 04.10.2016.
- */
+
 public class runner {
+
 
     public static void main(String[] args) {
         Point point1 = new Point(2, 5);
@@ -21,6 +20,7 @@ public class runner {
         list.add(line1);
         list.add(line2);
         list.add(line3);
+
 
     }
 }
