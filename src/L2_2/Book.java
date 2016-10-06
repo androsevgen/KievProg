@@ -1,7 +1,5 @@
 package L2_2;
 
-import java.util.Objects;
-
 public class Book {
 
     private int id;
@@ -89,7 +87,7 @@ public class Book {
         return this;
     }
 
-    @Override
+/*    @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (!(obj instanceof Book)) return false;
@@ -102,22 +100,22 @@ public class Book {
                 Objects.equals(number, book.number) &&
                 Objects.equals(price, book.price) &&
                 Objects.equals(typeofbinding, book.typeofbinding);
-    }
+    }*/
 
-    @Override
+/*    @Override
     public int hashCode() {
         return Objects.hash(id,name, Author,Publisher, Year, number, price, typeofbinding);
-    }
+    }*/
 
     @Override
     public String toString() {
         return " id: " + id
-                +" name: " + name
-                +" Author: " +Author
-                +" Publisher: " + Publisher
-                +" Year: " + Year
-                +" number: "+ number
-                +" price: " +price
-                +" typeofbinding: " + typeofbinding;
+                + " name: " + name
+                + " Author: " + Author
+                + " Publisher: " + Publisher
+                + " Year: " + Year
+                + " number: " + number
+                + " price: " + price
+                + " typeofbinding: " + typeofbinding;
     }
 }

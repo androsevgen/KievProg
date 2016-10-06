@@ -1,9 +1,7 @@
 package L2_2;
 
-/**
- * Created by admin on 05.10.2016.
- */
-public class TextUtils{
+
+public class TextUtils {
 
     private TextUtils() {
     }

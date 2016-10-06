@@ -3,47 +3,19 @@ package L2_2;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class BookRunner {
     public static void main(String[] args) {
         List<Book> books = ssBooks();
 
-        List<Book> booksfrom = BookUtils.findByFaculty(books, "Rigina");
-        System.out.println("booksfrom = " + booksfrom);
-//        System.out.println(ssBooks());
-//        System.out.println();
-//        System.out.println(ssBooks().get(0).getName());
-
-/*
-        if (ssBooks().get(0).getId() == 2) {
-            System.out.println(ssBooks().get(0));
-        } else System.out.println("ERROR");
-*/
-
-/*
-        if (ssBooks().get(0).getAuthor() == "Rigina") {
-            System.out.println(ssBooks().get(0));
-        } else System.out.println("ERROR");
-*/
-
-/*
-        String catname = "";
-        for (String item : catnamesList) {
-            catname = catname + item + " ";
-        }
-        editResult.setText("Все коты: " + catname);
-*/
-/*
-            String s = "";
-        for (Book ss :
-                ssBooks()) {
-            s = s + ss;
-        }
-        if (ssBooks().get(0).getId() == 2) {
-            System.out.println(ssBooks().get(0));
-        } else System.out.println("ERROR");
-*/
+        List<Book> booksfrom = BookUtils.findAuthor(books, "Rigina");
+        System.out.println("Author = " + booksfrom);
+        System.out.println();
+        List<Book> booksfromPublisher = BookUtils.findPublisher(books, "Tomsk");
+        System.out.println("Publisher = " + booksfromPublisher);
+        System.out.println();
+        List<Book> booksYear = BookUtils.findYear(books, 2030);
+        System.out.println("Year =  " + booksYear);
 
     }
 
@@ -64,8 +36,8 @@ public class BookRunner {
                 .setId(3)
                 .setName("Pola")
                 .setAuthor("Rigina")
-                .setPublisher("Tomsk")
-                .setYear(2000)
+                .setPublisher("Kozarovuchu")
+                .setYear(2050)
                 .setNumber(34)
                 .setPrice(40)
                 .setTypeofbinding("Machina"));

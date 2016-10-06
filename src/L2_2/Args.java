@@ -2,9 +2,7 @@ package L2_2;
 
 import java.util.Collection;
 
-/**
- * Created by admin on 05.10.2016.
- */
+
 public class Args{
 
     public static void check(final boolean expression, final String message) {

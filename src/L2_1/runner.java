@@ -21,7 +21,6 @@ public class runner {
         list.add(line2);
         list.add(line3);
 
-
     }
 }
 

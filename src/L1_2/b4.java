@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class b4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Ввести число от 1 до 12: ");
         int a = 0;
         try {
             a = scanner.nextInt();
         } catch (Exception e) {
-            System.out.println("Введите число от 1 до 12");
-            ;
+            System.out.println("Ввести число от 1 до 12");
         }
         if (a < 1 | a > 12) {
             System.out.println("ERROR");
