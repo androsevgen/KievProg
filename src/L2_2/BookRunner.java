@@ -16,6 +16,7 @@ public class BookRunner {
         System.out.println();
         List<Book> booksYear = BookUtils.findYear(books, 2030);
         System.out.println("Year =  " + booksYear);
+        System.out.println(ssBooks().size());
 
     }
 
