@@ -1,6 +1,6 @@
 package L3_1;
 
-public class runner {
+public class Runner {
     public static void main(String[] args) {
         Sentence sentence = new Sentence();
         sentence.setA("1 ");

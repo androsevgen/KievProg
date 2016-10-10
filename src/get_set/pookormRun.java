@@ -10,8 +10,8 @@ public class pookormRun {
             popkorm pop = new popkorm("Status");
         pop.setName("Bora");
         pop.setAge(23);
-        System.out.println(pop.getAge()+" " +pop.getName());
         System.out.println(pop.getStatus());
+        System.out.println(pop.getAge()+" " +pop.getName());
 
     }
 
