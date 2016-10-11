@@ -12,11 +12,15 @@ public class Runner {
         continent.setJupiter("Jupiter");
         continent.setEarth("Earth");
         continent.findCon();
+        System.out.println();
 
         Ocean ocean = new Ocean();
         ocean.setAtlantic("Atlantic");
         ocean.setEarth("Earth");
         ocean.findPlanet();
+        System.out.println();
+
+        continent.findCount();
 
     }
 }

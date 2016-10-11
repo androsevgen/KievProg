@@ -2,18 +2,16 @@ package L3_2;
 
 public class Ocean extends Planet {
     private String Atlantic;
-    private String Quiet;
-    private String Marsic;
+    private final String Quiet = "Quiet";
+    private final String Marsic = "Marsic";
 
     public Ocean() {
     }
 
-    public Ocean(String earth, String mars, String jupiter, String atlantic, String quiet, String marsic) {
+    public Ocean(String earth, String mars, String jupiter, String atlantic) {
         super(earth, mars, jupiter);
         Atlantic = atlantic;
-        Quiet = quiet;
-        Marsic = marsic;
-    }
+         }
 
     public String getAtlantic() {
         return Atlantic;
@@ -27,21 +25,16 @@ public class Ocean extends Planet {
         return Quiet;
     }
 
-    public void setQuiet(String quiet) {
-        Quiet = quiet;
-    }
 
     public String getMarsic() {
         return Marsic;
     }
 
-    public void setMarsic(String marsic) {
-        Marsic = marsic;
-    }
-
     public void findPlanet(){
         if (Atlantic == "Atlantic")
             System.out.println(Earth);
+        if (Quiet == Quiet)
+            System.out.println(Quiet);
         else System.out.println("ERROR");
     }
 

@@ -1,5 +1,8 @@
 package L3_2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Continent extends Planet {
     private String Eurasia;
     private String Africa;
@@ -56,5 +59,13 @@ public void findCon(){
     if (Jupiter == "Jupiter")
         System.out.println(JupiterEurasia);
     else System.out.println("ERROR");
+}
+public void findCount(){
+    List<Object> objects = new ArrayList<Object>();
+    objects.add(Eurasia);
+    objects.add(Africa);
+    objects.add(MarsAfrica);
+    objects.add(JupiterEurasia);
+    System.out.println("количество материков: " +objects.size());
 }
 }
