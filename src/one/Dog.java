@@ -16,7 +16,7 @@ public  class Dog {
 
     }
     public String test(){
-        String f = "OK";
+        String  f = "OK";
         System.out.println(f);
         return f;
     }
