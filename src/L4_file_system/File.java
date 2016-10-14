@@ -1,18 +1,14 @@
 package L4_file_system;
 
-public  class File {
+public class File implements Inter {
     private int size;
 
-
-    public File(int size) {
-        this.size = size;
+    public File(int i) {
+        size =i;
     }
 
+    @Override
     public int getSize() {
         return size;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
     }
 }
