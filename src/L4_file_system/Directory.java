@@ -4,61 +4,62 @@ package L4_file_system;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Directory implements Inter, Inter2, Inter3  {
-    private int size;
+public class Directory {
     List<File> files = new ArrayList<File>();
-    List<Directory> directories = new ArrayList<Directory>();
-
-    public Directory() {
-    }
-
-    public Directory(File file, File file1) {
-            size =+ file.getSize() + file1.getSize();
-    }
+    List<Directory> dirs = new ArrayList<Directory>();
+   private int size;
 
     public Directory(File file) {
-        size =+ file.getSize();
+        size += file.getSize();
+    }
+
+    public Directory() {
 
     }
 
-    public Directory(Directory directory11, File file11) {
-        for (File f :
-                directory11.files) {
-            size =+ file11.getSize();
+    public Directory(File file, File file2) {
+        size += file.getSize() + file2.getSize();
+
+    }
+
+    public Directory(Directory dir, File file2) {
+        for (File f : dir.files) {
+            size += f.getSize();
         }
-
+        size += file2.getSize();
     }
-    public Directory(Directory dir){
-        for (File f:
-             dir.files) {
-            size =+ f.getSize();
+
+    public Directory(Directory d) {
+        for (File f : d.files) {
+            size += f.getSize();
         }
     }
 
-
-    public List<File> getFiles(){
-        return files;
+    public void add(File f) {
+        files.add(f);
     }
 
-    public List<Directory> getDirs(){
-        return directories;
+    public void add(Directory d) {
+        dirs.add(d);
     }
 
-
-    @Override
     public int getSize() {
+        for (File f : files) {
+            size += f.getSize();
+        }
+
+        //дописать для файлов внутри директорий
+
         return size;
     }
 
-
-    @Override
-    public boolean add(File f) {
-        return files.add(f);
+    public List<File> getFiles() {
+        return files;
     }
 
-    @Override
-    public boolean add(Directory d) {
-        return directories.add(d);
+    public List<Directory> getDirs() {
+        return dirs;
     }
+
 }
 
