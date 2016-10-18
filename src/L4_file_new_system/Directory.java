@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Directory {
-    List<File> files = new ArrayList<>();
-    List<Directory> dirs = new ArrayList<>();
+   private List<File> files = new ArrayList<>();
+   private List<Directory> dirs = new ArrayList<>();
     private int size;
 
     public Directory() {
