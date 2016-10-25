@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Directory {
-   private List<File> files = new ArrayList<>();
-   private List<Directory> dirs = new ArrayList<>();
+    private List<File> files = new ArrayList<>();
+    private List<Directory> dirs = new ArrayList<>();
     private int size;
 
     public Directory() {
@@ -36,15 +36,20 @@ public class Directory {
     }
 
 
-
-
     public Directory add(File f) {
-              files.add(f);
+        if (f.hashCode() == this.hashCode()) {
+            throw new IllegalArgumentException("You have hanging");
+        } else
+
+            files.add(f);
         return this;
     }
 
     public Directory add(Directory d) {
-         dirs.add(d);
+        if (d.hashCode() == this.hashCode()) {
+            throw new IllegalArgumentException("You have hanging");
+        } else
+            dirs.add(d);
         return this;
     }
 
