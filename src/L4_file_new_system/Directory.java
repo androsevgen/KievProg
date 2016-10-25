@@ -24,14 +24,6 @@ public class Directory {
         size += file3.getSize() + directory.getSize();
     }
 
-/*
-    public Directory(Directory dd) {
-        for (File f : dd.files) {
-            size += f.getSize();
-        }
-    }
-*/
-
     public int getSize() {
         for (File f : files) {
             size += f.getSize();
@@ -43,15 +35,18 @@ public class Directory {
         return size;
     }
 
-    public void add(File f) {
-        files.add(f);
+
+
+
+    public Directory add(File f) {
+              files.add(f);
+        return this;
     }
 
-    public void add(Directory d) {
-        dirs.add(d);
+    public Directory add(Directory d) {
+         dirs.add(d);
+        return this;
     }
-
-
 
 }
 
