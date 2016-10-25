@@ -17,7 +17,7 @@ public class Runner {
         lists.add(new Film("Бойцовский клуб", 1999, THRILLER).addActors("Эдвард Нортон"));
         lists.add(new Film("Zомби каникулы", 2013, HORROR).addActors("Юлия Волкова"));
 
-
+        
 
     }
 }
