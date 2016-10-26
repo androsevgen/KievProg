@@ -17,7 +17,16 @@ public class Film {
         this.year = year;
         this.genre = genre;
     }
-    public Film addActors(String ac){
+
+    public Genre getGenre() {
+        return genre;
+    }
+
+    public void setGenre(Genre genre) {
+        this.genre = genre;
+    }
+
+    public Film addActors(String ac) {
         actors.add(ac);
         return this;
     }
