@@ -55,6 +55,4 @@ public class Film {
                 ", genre=" + genre +
                 '}';
     }
-
-
 }
