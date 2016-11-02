@@ -8,7 +8,7 @@ public class Runner {
         Directory d2 = new Directory(new Directory(new File(30)), new File(40));
 
         root.add(d1).add(d2).add(new File(50)).add(new File(150));
-//        root.add(root);
+        root.add(root);
         System.out.println(root.getSize());
 
     }
