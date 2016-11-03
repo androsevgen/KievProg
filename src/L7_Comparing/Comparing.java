@@ -49,5 +49,8 @@ public class Comparing {
         System.out.println("Отсортировать имена по количеству букв: " + names);
     }
 
-
+    public void sotr5() {
+        Collections.sort(names, new ReverSort());
+        System.out.println("Отсортировать имена по количеству букв, а в группах, где количество букв одинаковое, - в алфавитном порядке по убыванию: " + names);
+    }
 }

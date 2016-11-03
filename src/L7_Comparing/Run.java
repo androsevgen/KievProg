@@ -24,6 +24,6 @@ public class Run {
         comp.sortAlfavitREVERS();
         comp.sort3();
         comp.sort4();
-
+        comp.sotr5();
     }
 }
