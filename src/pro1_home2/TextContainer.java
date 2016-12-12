@@ -11,15 +11,14 @@ class Container {
     public void save(..) {…}
 }*/
 
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
 
-@SaveTo(path = "c:\\file.txt")
+@SaveTo(path = "C:\\temp\\file.txt")
 public class TextContainer {
 
-    private String line = "Test";
+    private String line = "Test Writer OK";
 
 
     @Saver
@@ -27,15 +26,12 @@ public class TextContainer {
         try {
 
             FileWriter writer = new FileWriter(path);
- /*           File file = new File("C:\\w\\");
-            file.mkdirs();*/
 
-           try{
-            writer.write(line);
-           } finally {
-               writer.close();
-               writer.flush();
-           }
+            try {
+                writer.write(line);
+            } finally {
+                writer.close();
+            }
 
         } catch (IOException e) {
             e.printStackTrace();

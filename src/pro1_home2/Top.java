@@ -1,7 +1,5 @@
 package pro1_home2;
 
-import java.io.FileDescriptor;
-import java.io.FileWriter;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
@@ -10,8 +8,8 @@ public class Top {
         TextContainer textContainer = new TextContainer();
         Class<?> aClass = textContainer.getClass();
 
-        if (! aClass.isAnnotationPresent(SaveTo.class))
-        {
+
+        if (!aClass.isAnnotationPresent(SaveTo.class)) {
             System.out.println("ERROR");
             return;
         }
@@ -22,7 +20,7 @@ public class Top {
 
         for (Method method :
                 methods) {
-            if (method.isAnnotationPresent(SaveTo.class)){
+            if (method.isAnnotationPresent(Saver.class)) {
                 try {
                     method.invoke(textContainer, path);
                     break;
@@ -36,7 +34,6 @@ public class Top {
         System.out.println("Write OK");
 
     }
-
 
 
 }
