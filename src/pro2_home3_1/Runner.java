@@ -1,5 +1,7 @@
 package pro2_home3_1;
 
+import L3_1.Sentence;
+
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -10,7 +12,7 @@ import java.util.ArrayList;
 public class Runner {
     private ArrayList<Top> tops = new ArrayList<Top>();
 
-    public static void main(String[] args) throws InvocationTargetException, IllegalAccessException {
+    public static void main(String[] args) throws InvocationTargetException, IllegalAccessException, NoSuchFieldException, InstantiationException {
         Top top = new Top("Test", 12, "Lara");
             Runner runner = new Runner();
         runner.tops.add(top);
@@ -35,13 +37,14 @@ public class Runner {
 
         }
         System.out.println("Write OK");
-        Serialize serialize = new Serialize();
+        String seria = Serialize.serA(top);
 
-        serialize.ser();
-        serialize.dez();
+        Serialize.ser();
+        Serialize.dez();
         System.out.println("");
-        System.out.println(serialize.serA(top));
-    }
+        System.out.println(Serialize.serA(top));
+
+    };
 
 }
 
