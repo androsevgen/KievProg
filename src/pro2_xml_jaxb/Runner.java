@@ -1,18 +1,22 @@
 package pro2_xml_jaxb;
 
+/*Есть список поездов, представленный с виде XML. Вывести на экран информацию о тех поездах, которые
+        отправляются сегодня с 15:00 до 19:00.*/
+
+
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
-import javax.xml.bind.annotation.adapters.XmlAdapter;
 import java.io.File;
-import java.time.LocalDate;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 public class Runner {
     public static void main(String[] args) throws JAXBException {
         Trains trains = new Trains();
+        Train train = new Train();
+
+
 
 
         File file = new File("G:\\prooooo\\KievProg\\src\\pro2_xml_jaxb\\train.xml");
@@ -25,37 +29,6 @@ public class Runner {
         trains = (Trains) unmarshaller.unmarshal(file);
         System.out.println(trains);
 
-        Train train = new Train();
-        System.out.println(train.getDeparture());
-    }
-
-  /*  public class TimeFormatter extends XmlAdapter<String,LocalTime> {
-        @Override
-        public LocalTime unmarshal(String v) throws Exception {
-            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm");
-            LocalTime time = LocalTime.parse(v, dtf);
-            return time;
-        }
-
-        @Override
-        public String marshal(LocalTime v) throws Exception {
-            return v.toString();
-        }
-    }
-
-        public class DateFormatter extends XmlAdapter<String, LocalDate> {
-            @Override
-            public LocalDate unmarshal(String v) throws Exception {
-
-                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-                LocalDate date = LocalDate.parse(v, dtf);
-                return date;
-            }
-
-            @Override
-            public String marshal(LocalDate v) throws Exception {
-                return v.toString();
-            }
-        }*/
 
     }
+}

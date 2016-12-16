@@ -3,44 +3,29 @@ package pro2_xml_jaxb;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-
-import java.text.SimpleDateFormat;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @XmlRootElement(name = "train")
 public class Train {
 
     private String from;
     private String to;
-    private String date;
-    private Date departure;
-
-
+    private Date date;
+    private LocalTime departure;
 
 
     public Train() {
     }
 
-    public Train(String from, String to, String date, Date departure) {
+    public Train(String from, String to, Date date, LocalTime departure) {
         this.from = from;
         this.to = to;
         this.date = date;
-        this.departure = departure;
-    }
-    @XmlElement
-    public void setFrom(String from) {
-        this.from = from;
-    }
-    @XmlElement
-    public void setTo(String to) {
-        this.to = to;
-    }
-    @XmlElement
-    public void setDate(String date) {
-        this.date = date;
-    }
-    @XmlElement
-    public void setDeparture(Date departure) {
         this.departure = departure;
     }
 
@@ -48,22 +33,39 @@ public class Train {
         return from;
     }
 
+    @XmlElement
+    public void setFrom(String from) {
+        this.from = from;
+    }
+
     public String getTo() {
         return to;
     }
 
+    @XmlElement
+    public void setTo(String to) {
+        this.to = to;
+    }
 
-    public String getDate() {
+    @XmlJavaTypeAdapter(DateAdapter.class)
+    public Date getDate() {
         return date;
     }
 
+    @XmlElement
+    public void setDate(Date date) {
+        this.date = date;
+    }
 
-    public Date getDeparture() {
+    @XmlJavaTypeAdapter(LocalTimeAdapter.class)
+    public LocalTime getDeparture() {
         return departure;
     }
 
-    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm");
-
+    @XmlElement
+    public void setDeparture(LocalTime departure) {
+        this.departure = departure;
+    }
 
     @Override
     public String toString() {
