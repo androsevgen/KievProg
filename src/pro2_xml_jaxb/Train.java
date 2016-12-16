@@ -1,18 +1,17 @@
 package pro2_xml_jaxb;
 
 
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 @XmlRootElement(name = "train")
 public class Train {
 
+    private int id;
     private String from;
     private String to;
     private Date date;
@@ -22,11 +21,23 @@ public class Train {
     public Train() {
     }
 
-    public Train(String from, String to, Date date, LocalTime departure) {
+
+    public Train(int id, String from, String to, Date date, LocalTime departure) {
+        this.id = id;
         this.from = from;
         this.to = to;
         this.date = date;
         this.departure = departure;
+    }
+
+
+    @XmlAttribute
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getFrom() {
@@ -69,12 +80,11 @@ public class Train {
 
     @Override
     public String toString() {
-        return "Train{" +
+        return id + "Train{" +
                 "from='" + from + '\'' +
                 ", to='" + to + '\'' +
                 ", date='" + date + '\'' +
                 ", departure='" + departure + '\'' +
                 '}';
     }
-
 }

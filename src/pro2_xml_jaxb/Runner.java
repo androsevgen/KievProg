@@ -9,7 +9,6 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import java.io.File;
-import java.util.Date;
 
 public class Runner {
     public static void main(String[] args) throws JAXBException {
@@ -17,9 +16,8 @@ public class Runner {
         Train train = new Train();
 
 
-
-
-        File file = new File("G:\\prooooo\\KievProg\\src\\pro2_xml_jaxb\\train.xml");
+        //File file = new File("G:\\prooooo\\KievProg\\src\\pro2_xml_jaxb\\train.xml");
+        File file = new File("C:\\Users\\admin\\IdeaProjects\\KievProg\\src\\pro2_xml_jaxb\\train.xml");
         JAXBContext jaxbContext = JAXBContext.newInstance(Trains.class);
         Marshaller marshaller = jaxbContext.createMarshaller();
 
@@ -28,7 +26,6 @@ public class Runner {
         Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
         trains = (Trains) unmarshaller.unmarshal(file);
         System.out.println(trains);
-
 
     }
 }
