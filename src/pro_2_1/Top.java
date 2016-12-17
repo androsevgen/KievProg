@@ -12,7 +12,7 @@ public class Top {
 
 
         byte[] dataArr;
-        RandomAccessFile file = new RandomAccessFile("C:\\Users\\admin.hp-250\\IdeaProjects\\KievProg\\src\\pro_2_1\\json.txt", "r");
+        RandomAccessFile file = new RandomAccessFile("C:\\Users\\admin\\IdeaProjects\\KievProg\\src\\pro_2_1\\json.txt", "r");
 
         try {
             dataArr = new byte[(int) file.length()];
