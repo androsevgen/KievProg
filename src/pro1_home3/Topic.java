@@ -10,7 +10,7 @@ public class Topic {
         String s = Serial.seriale(top);
         System.out.println(s);
 
-        top = dez.deze(s, Top.class);
+        top = Serial.deze(s, Top.class);
         System.out.println(top.getA() + " " + top.getD());
     }
 
